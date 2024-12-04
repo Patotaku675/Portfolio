@@ -52,7 +52,7 @@ Para rodar este projeto, você precisa das seguintes dependências instaladas:
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/seu-usuario/agenda.git
+   git clone https://github.com/Patotaku675/Portfolio/tree/880cacbb218b4841243651d043f4baad84a8036c/Projeto-3/Projeto-Agenda
    cd agenda
    ```
 
@@ -85,3 +85,5 @@ Para adicionar 1000 contatos aleatórios no banco de dados, utilize o script loc
    ```
    python .\utils\create_contacts.py
    ```
+
+Obrigado por conferir o projeto! Estou sempre aberto a novos desafios e oportunidades.

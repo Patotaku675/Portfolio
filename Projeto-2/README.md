@@ -42,7 +42,7 @@ Este projeto consiste em uma calculadora interativa desenvolvida com **PySide6**
 
 1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-pyside6.git
+   git clone https://github.com/Patotaku675/Portfolio/tree/880cacbb218b4841243651d043f4baad84a8036c/Projeto-2/Calculadora
    cd calculadora-pyside6
    ```
 2. Crie um ambiente virtual:
@@ -58,3 +58,5 @@ Este projeto consiste em uma calculadora interativa desenvolvida com **PySide6**
    ```
    python main.py
    ```
+
+Obrigado por conferir o projeto! Estou sempre aberto a novos desafios e oportunidades.
