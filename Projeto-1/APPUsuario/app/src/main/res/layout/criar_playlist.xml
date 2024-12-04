@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Barra roxa no topo com o nome do aplicativo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/background_purple"
+        android:gravity="center">
+
+        <!-- Nome do aplicativo exibido na barra -->
+        <TextView
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Subtítulo indicando a funcionalidade de criar playlist -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center">
+
+        <!-- Texto do subtítulo centralizado -->
+        <TextView
+            android:text="@string/criarplaylist"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/titulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Área centralizada com campos e botão -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Campo para inserir o nome da nova playlist -->
+        <EditText
+            android:inputType="textNoSuggestions"
+            android:id="@+id/edtNomePlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="name"
+            android:hint="@string/nomePlayHint" />
+
+        <!-- Botão para salvar a nova playlist -->
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/CriarBTN"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

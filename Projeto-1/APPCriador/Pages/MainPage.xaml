@@ -1,0 +1,78 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPCriador.MainPage"
+             Title="Página de Login"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ScrollView>
+        <!-- Grid principal da página, define a estrutura e layout -->
+        <Grid Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+            <!-- Definição de linhas no Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <!-- Logo e título -->
+                <RowDefinition Height="Auto" />
+                <!-- Subtítulo -->
+                <RowDefinition Height="Auto" />
+                <!-- Entrada de texto -->
+                <RowDefinition Height="Auto" />
+                <!-- Botão de login -->
+                <RowDefinition Height="Auto" />
+                <!-- Botão de cadastro -->
+                <RowDefinition Height="*" />
+                <!-- Espaço restante -->
+            </Grid.RowDefinitions>
+
+            <!-- Título principal -->
+            <Label Text="Bem-Vindo"
+                   Grid.Row="0"
+                   FontSize="32"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   FontAttributes="Bold"
+                   Margin="0,30,0,240" />
+
+            <!-- Subtítulo da página -->
+            <Label Text="Login Criador"
+                   FontFamily="Georgia"
+                   Grid.Row="1"
+                   TextColor="{StaticResource PrimaryColor}"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0" />
+
+            <!-- Campo para entrada do nome do criador -->
+            <Entry x:Name="NomeDoCriadorEntry"
+                   Placeholder="Nome do Criador"
+                   Grid.Row="2"
+                   BackgroundColor="LightGray"
+                   PlaceholderColor="DarkSlateGray"
+                   TextColor="Black"
+                   Margin="0,10,0,0"
+                   HorizontalOptions="FillAndExpand"
+                   HeightRequest="50" 
+                   Completed="OnEntryCompleted" />
+            <!-- Evento chamado ao completar a entrada -->
+
+            <!-- Botão para login -->
+            <Button Text="Login"
+                    Grid.Row="3"
+                    Margin="0,20,0,0"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    Clicked="OnLoginClicked" />
+            <!-- Evento chamado ao clicar no botão -->
+
+            <!-- Botão para cadastro -->
+            <Button Text="Cadastrar"
+                    Grid.Row="4"
+                    Margin="0,10,0,0"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    WidthRequest="400"
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="OnCadastrarClicked" />
+            <!-- Evento chamado ao clicar no botão -->
+        </Grid>
+    </ScrollView>
+</ContentPage>

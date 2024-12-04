@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="APPCriador.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:APPCriador"
+    Shell.FlyoutBehavior="Flyout" 
+    Title="APPCriador">
+    <!-- Título da aplicação mostrado no Shell -->
+
+    <!-- Recursos para estilização -->
+    <Shell.Resources>
+        <!-- Estilo para o título -->
+        <Style TargetType="Label" x:Key="TitleLabelStyle">
+            <Setter Property="TextColor" Value="White" />
+            <!-- Cor branca para o texto -->
+            <Setter Property="FontSize" Value="24" />
+            <!-- Tamanho da fonte do título -->
+        </Style>
+    </Shell.Resources>
+
+    <!-- Definição do conteúdo da Shell -->
+    <ShellContent
+        Title="APPCriador"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <!-- Personalização do título na barra superior -->
+        <Shell.TitleView>
+            <Grid VerticalOptions="Center">
+                <Label Text="APPCriador" 
+                   Style="{StaticResource TitleLabelStyle}" 
+                   HorizontalOptions="Center" />
+                <!-- Título centralizado com estilo aplicado -->
+            </Grid>
+        </Shell.TitleView>
+
+</Shell>

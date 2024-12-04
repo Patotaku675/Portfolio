@@ -1,0 +1,77 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPCriador.Pages.PaginaDeConteudos"
+             Title="Página de Conteúdos"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <!-- Layout principal com preenchimento de 20 -->
+    <StackLayout Padding="20">
+
+        <!-- Título principal da página -->
+        <Label x:Name="bemVindo"
+               FontSize="32"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               FontAttributes="Bold"
+               Margin="0,30,0,160"/>
+
+        <!-- Seção de conteúdo, título "Conteúdos" -->
+        <Label Text="Conteúdos"
+               FontFamily="Georgia"
+               TextColor="{StaticResource PrimaryColor}"
+               FontSize="Large"
+               Margin="0,20,0,20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <!-- Grid contendo os botões de Upload e Deletar -->
+        <Grid ColumnDefinitions="*,*" 
+              HorizontalOptions="Center"
+              Margin="0,0,0,10"
+              WidthRequest="400">
+            <!-- Botão de upload, alinhado à esquerda na grid -->
+            <Button Text="Upload"
+                    Grid.Column="0"
+                    BackgroundColor="{StaticResource PrimaryColor}"
+                    TextColor="White"
+                    Margin="0,0,5,0"
+                    HeightRequest="50"
+                    CornerRadius="20"
+                    Clicked="OnAdicionarClicked"/>
+            <!-- Botão de deletar, alinhado à direita na grid -->
+            <Button Text="Deletar"
+                    Grid.Column="1"
+                    BackgroundColor="{StaticResource PrimaryColor}"
+                    TextColor="White"
+                    Margin="5,0,0,0"
+                    HeightRequest="50"
+                    CornerRadius="20"
+                    Clicked="OnApagarClicked"/>
+        </Grid>
+
+        <!-- Caixa de conteúdo com bordas arredondadas e rolagem para os conteúdos -->
+        <Border 
+               BackgroundColor="#BCA3D3"
+               Stroke="Black"
+               Padding="10"
+               Margin="0,10,0,0"
+               MaximumWidthRequest="1122"
+               MinimumWidthRequest="100"
+               HorizontalOptions="Center"
+               StrokeThickness="6"
+               StrokeShape="RoundRectangle 30,30">
+
+            <!-- ScrollView para permitir rolagem dos conteúdos com altura fixa -->
+            <ScrollView Orientation="Vertical" HeightRequest="500">
+                <!-- Layout flexível para acomodar os conteúdos em linha -->
+                <FlexLayout x:Name="MeuFlexLayout"
+                            Direction="Row"
+                            Wrap="Wrap"
+                            JustifyContent="Start"
+                            AlignItems="Center">
+                </FlexLayout>
+            </ScrollView>
+        </Border>
+
+    </StackLayout>
+</ContentPage>

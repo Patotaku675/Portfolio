@@ -1,0 +1,97 @@
+# ASP.NET
+bin/
+obj/
+.vs/
+.vscode/
+# Arquivos de configuração do IIS (caso aplicável)
+IISExpress/
+# Logs
+*.log
+# Arquivos de configuração do usuário
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# MAUI.NET
+/bin/
+/obj/
+*.userprefs
+*.vsconfig
+.vscode/
+*.db
+*.bak
+*.tmp
+
+# Android Studio
+# Android Studio e Gradle
+.gradle/
+.idea/
+build/
+local.properties
+*.iml
+*.apk
+*.ap_
+# Arquivos do NDK
+.ndk/
+# Arquivos de configuração local
+*.keystore
+*.jks
+*.p12
+*.env
+*.properties
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+*.eggs/
+*.pytest_cache/
+.tox/
+.coverage
+*.cover
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+.dmypy.json
+.ipynb_checkpoints/
+
+# Django
+static/
+localsettings.py
+db.sqlite3
+*.sqlite3
+migrations/**/pycache/
+**/__pycache__/
+media/
+
+# PySide6
+*.qmlc
+*.qmltypes
+*.pro.user
+*.pro.user.*
+*.qrc.dep
+
+# MySQL
+*.sql
+*.sql.gz
+*.sql.bak
+
+# SQLite3
+*.sqlite
+*.sqlite3
+
+# Arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Dados sensíveis
+*.env
+*.secrets
+*.key
+*.pem
+*.p12

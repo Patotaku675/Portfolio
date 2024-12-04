@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissões necessárias para o aplicativo -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" android:maxSdkVersion="33" />
+
+    <application
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Serviço opcional para gerenciar sessões de mídia -->
+        <service
+            android:name="androidx.media3.session.MediaSessionService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService" />
+            </intent-filter>
+        </service>
+
+        <!-- Atividades do aplicativo -->
+        <activity android:name=".PlaylistsActivity" />
+        <activity android:name=".PlaylistContentsActivity" />
+        <activity android:name=".MinhasPlaylistsActivity" />
+        <activity android:name=".CriarPlaylistActivity" />
+        <activity android:name=".ApagarPlaylistActivity" />
+        <activity android:name=".SelecConteudosActivity" />
+
+        <!-- Atividade para exibir mídia sem barra de ação -->
+        <activity
+            android:name=".MediaDisplayActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+
+        <activity android:name=".MeusConteudosActivity" />
+
+        <!-- Atividade principal do aplicativo -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

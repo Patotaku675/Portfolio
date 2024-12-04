@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">APPUsuário</string>
+    <string name="emailHint">Email de Usuário</string>
+    <string name="nomeHint">Nome de Usuário</string>
+    <string name="nomePlayHint">Nome da Playlist</string>
+    <string name="tituloCima">Bem-Vindo</string>
+    <string name="loginText">Login</string>
+    <string name="cadastroText">Cadastro</string>
+    <string name="tituloPH">titulo</string>
+    <string name="criadorPH">Criador: criadorNome</string>
+    <string name="curtidasPH">Curtidas: 0</string>
+    <string name="addButton">👍🏻</string>
+    <string name="addButtonP">+</string>
+    <string name="playlist">Playlists</string>
+    <string name="minhaplaylist">Minhas Playlists</string>
+    <string name="nomePlay">Nome:</string>
+    <string name="criarplaylist">Criar Playlist</string>
+    <string name="apagarplaylist">Apagar Playlist</string>
+    <string name="CriarBTN">Criar Playlist</string>
+    <string name="selecConteudo">Adicionar Conteúdos</string>
+</resources>

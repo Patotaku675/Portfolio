@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:APPCriador"
+             x:Class="APPCriador.App">
+
+    <!-- Definição de recursos da aplicação -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Dicionários externos para cores e estilos -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <!-- Cores personalizadas -->
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <!-- Estilos personalizados -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Tema Claro -->
+            <!-- Estilo de fundo para as páginas -->
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
+
+            <!-- Estilo para títulos -->
+            <Style TargetType="Label" x:Key="HeaderLabel">
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="FontSize" Value="32" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilo padrão para textos -->
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <!-- Estilo para botões -->
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <!-- Estilo para entradas de texto -->
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="Times New Roman" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="PlaceholderColor" Value="Gray" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

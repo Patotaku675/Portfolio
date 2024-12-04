@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPCriador.Pages.PaginaDoCriador"
+             Title="Página do Criador"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <!-- Define a estrutura da página com um layout em grade -->
+    <Grid Padding="10" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+
+        <!-- Define as linhas da grade -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Primeira linha ajustada automaticamente -->
+            <RowDefinition Height="Auto" />
+            <!-- Segunda linha ajustada automaticamente -->
+            <RowDefinition Height="Auto" />
+            <!-- Terceira linha ajustada automaticamente -->
+            <RowDefinition Height="*" />
+            <!-- Última linha ocupa o restante do espaço -->
+        </Grid.RowDefinitions>
+
+        <!-- Título do aplicativo exibido no topo -->
+        <Label x:Name="bemVindo"
+               Grid.Row="0" 
+               FontSize="32"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               FontAttributes="Bold"
+               Margin="0,30,0,300" />
+
+        <!-- Botão para acessar conteúdos -->
+        <Button Text="Conteúdos"
+                x:Name="conteudoButton"
+                Grid.Row="1" 
+                Margin="0,20,0,0"
+                CornerRadius="20"
+                HeightRequest="50"
+                WidthRequest="400"/>
+
+            <!-- Botão para acessar playlists -->
+            <Button Text="Playlist"
+                x:Name="playlistButton"
+                Grid.Row="2" 
+                Margin="0,20,0,0"
+                CornerRadius="20" 
+                HeightRequest="50"
+                WidthRequest="400"/>
+    </Grid>
+</ContentPage>
