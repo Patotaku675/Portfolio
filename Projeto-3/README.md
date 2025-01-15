@@ -1,58 +1,50 @@
-# AGENDA
+# E-Commerce
 
-Um sistema de gerenciamento de contatos desenvolvido com Django. Este projeto inclui um app chamado `contact` e utiliza pastas para arquivos estáticos e templates.
-
----
-
-## Estrutura do Projeto
-
-- **App Principal:** `contact`
-- **Pastas para arquivos estáticos:** `base_static`
-- **Pastas para templates:** `base_templates` e templates adicionais dentro do app `contact`
+Um sistema de E-Commerce desenvolvido com Django. Mostrando a base de um sistema, sem metodo de pagamento.
 
 ---
 
 ## Funcionalidades do Site
 
-1. **Página Inicial:**
+1. **Página Admin.**
+   - Somente para perfis autorizados como administradores.
+   - Permite a visualização de todos os dados criados. (Perfil, Pedido, Produto)
+   - Permite adicionar, remover ou editar produtos e suas variações.
+
+2. **Página Inicial.**
    - Exibe um cabeçalho dinâmico que altera dependendo se o usuário está logado ou deslogado.
-   - Lista todos os contatos visíveis, independentemente do estado de login.
+   - Exibe o carrinho do usuário, caso tenha produto dentro dele.
+   - Lista todos os produtos visíveis, independentemente do estado de login.
+   - Campo de busca simples.
 
-2. **Página de Login e Registro:**
-   - Permite que os usuários façam login.
-   - Registro de novos usuários.
+3. **Login, Registro e Gerenciamento de perfil.**
 
-3. **Gerenciamento de Perfil:**
-   - Usuários podem registrar e atualizar seus perfis.
+4. **Detalhe do produto.**
+   - Exibe a imagem, a descrição longa, variações e o preço do produto.
+   - Permite adicionar ao carrinho do usuário.
 
-4. **Contatos:**
-   - **Criar Contato:** Permite criar contatos com nome, imagem e categoria.
-   - **Editar/Apagar Contato:** Apenas o criador do contato pode realizar essas ações.
-   - **Visualizar Contatos:** Qualquer pessoa (mesmo deslogada) pode visualizar os contatos.
+5. **Visualizar Carinho.**
+   - Permite ter um resumo de todos os produtos dentro do carrinho.
+   - Permite finalizar a compra.
 
----
+6. **Resumo da Compra**
+   - Exibe os detalhes do perfil do usuário e endereço apos fechar o carrinho.
+   - Lista os produtos dentro do carrinho.
 
-## Requisitos
+7. **Pedido Realizado**
+   - Informa um resumo da compra finalizada e redireciona para o pagamento.
 
-Para rodar este projeto, você precisa das seguintes dependências instaladas:
-
-- **asgiref==3.8.1**  
-- **Django==5.1.3**  
-- **Faker==33.1.0**  
-- **pillow==11.0.0**  
-- **python-dateutil==2.9.0.post0**  
-- **six==1.16.0**  
-- **sqlparse==0.5.2**  
-- **typing_extensions==4.12.2**  
-- **tzdata==2024.2**  
+8. **Lista de Pedidos**
+   - Informa todos os pedidos feitos pelo usuário.
+   - Permite ver detalhes mais aprofundados de cada pedido.
 
 ---
 
-## Como Inicializar o Servidor Web
+## Como Inicializar o Servidor Web Local
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/Patotaku675/Portfolio/tree/880cacbb218b4841243651d043f4baad84a8036c/Projeto-3/Projeto-Agenda
+   git clone ...
    cd agenda
    ```
 
@@ -74,16 +66,3 @@ Para rodar este projeto, você precisa das seguintes dependências instaladas:
    ```
    python manage.py runserver
    ```
-
-## Injetando contatos para teste
-
-Para adicionar 1000 contatos aleatórios no banco de dados, utilize o script localizado em `/utils/create_contacts.py`. Siga os passos abaixo:
-
-1. Certifique-se de que o servidor está rodando e o banco de dados está configurado corretamente.
-
-2. estando no ambiete virtual python, execute o comando:
-   ```
-   python .\utils\create_contacts.py
-   ```
-
-Obrigado por conferir o projeto! Estou sempre aberto a novos desafios e oportunidades.

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load fgfilters %}
+{% load static %}
+
+{% block titulo %}{{ pedido }} | {% endblock titulo %}
+
+{% block conteudo %}
+
+    {% include "parciais/_pedido.html" %}
+
+{% endblock conteudo %}

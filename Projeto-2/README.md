@@ -1,50 +1,36 @@
-# Calculadora
+# AGENDA
 
-Este projeto consiste em uma calculadora interativa desenvolvida com **PySide6**. Ele oferece suporte a operações aritméticas, funcionalidade de teclado e um design intuitivo com botões para interação.
-
----
-
-## Funcionalidades
-
-### **Operações Suportadas**
-- **Aritméticas:** Soma (`+`), Subtração (`-`), Multiplicação (`*`), Divisão (`/`), Potenciação (`P` ou `^`).
-- **Adicionais:**  
-  - **Inverter sinal:** Muda o número atual de positivo para negativo ou vice-versa. (`N`)  
-  - **Apagar dígito:** Remove o último dígito inserido.  
-  - **Limpar tudo:** Reseta a calculadora para o estado inicial.  
-
-### **Interface do Usuário**
-- **Display:**  
-  - O display principal mostra o número atual ou o resultado de uma operação.  
-  - Um **display superior** exibe a operação sendo realizada, como `20 +` ou `20 + 30 = 50`.  
-
-- **Botões Incluídos:**  
-  - Números: `0-9` e `.` (ponto decimal).  
-  - Operadores: `+`, `-`, `*`, `/`, `P` (potenciação).  
-  - Controle:  
-    - **C:** Limpa tudo.  
-    - **Backspace:** Apaga o último dígito.  
-    - **N:** Inverte o sinal do número atual.  
-    - **Enter ou `=`:** Mostra o resultado da operação.  
-
-### **Funcionalidade do Teclado**
-- Digite os números e operadores diretamente pelo teclado.  
-- Utilize os atalhos:  
-  - `C` para limpar tudo.  
-  - `Backspace` para apagar o último dígito.  
-  - `N` para inverter o sinal.  
-  - `P` ou `^` para potenciação.  
-  - `Enter` para exibir o resultado.  
+Um sistema de gerenciamento de contatos simples desenvolvido com Django. 
 
 ---
 
-## Como Rodar o Projeto
+## Funcionalidades do Site
 
-1. **Clone o Repositório**
-   ```bash
-   git clone https://github.com/Patotaku675/Portfolio/tree/880cacbb218b4841243651d043f4baad84a8036c/Projeto-2/Calculadora
-   cd calculadora-pyside6
+1. **Página Admin.**
+   - Somente para perfis autorizados como administradores.
+   - Permite a manipulação de todos os dados.
+
+2. **Página Inicial:**
+   - Exibe um cabeçalho dinâmico que altera dependendo se o usuário está logado ou deslogado.
+   - Lista todos os contatos visíveis, independentemente do estado de login.
+
+3. **Login, Registro e Gerenciamento de perfil.**
+
+4. **Contatos:**
+   - **Criar Contato:** Permite criar contatos com nome, imagem e categoria.
+   - **Editar/Apagar Contato:** Apenas o criador do contato pode realizar essas ações.
+   - **Visualizar Contatos:** Qualquer pessoa (mesmo deslogada) pode visualizar os contatos.
+
+---
+
+## Como Inicializar o Servidor Web
+
+1. Clone o repositório:
    ```
+   git clone ...
+   cd agenda
+   ```
+
 2. Crie um ambiente virtual:
    ```
    python -m venv venv
@@ -54,9 +40,25 @@ Este projeto consiste em uma calculadora interativa desenvolvida com **PySide6**
    ```
    pip install -r requirements.txt
    ```
+4. Realize as migrações necessárias:
+   ```
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
 5. Inicialize o servidor:
    ```
-   python main.py
+   python manage.py runserver
+   ```
+
+## Injetando contatos para teste
+
+Para adicionar 1000 contatos aleatórios no banco de dados, utilize o script localizado em `/utils/create_contacts.py`. Siga os passos abaixo:
+
+1. Certifique-se de que o servidor está rodando e o banco de dados está configurado corretamente.
+
+2. estando no ambiete virtual python, execute o comando:
+   ```
+   python .\utils\create_contacts.py
    ```
 
 Obrigado por conferir o projeto! Estou sempre aberto a novos desafios e oportunidades.
